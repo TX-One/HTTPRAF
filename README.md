@@ -4,8 +4,6 @@ A high-performance HTTP scanner designed for cybersecurity teams. Key features:
 
 - **Massive Parallelism**: 10K+ URLs/min via libcurl-multi
 - **Smart Filtering**: Regex-based status code matching
-- **SOC Integration**: JSON/CSV output formats
-- **Zero-Dependency**: Single binary deployment
 
 # Quick Start
 ## Install Dependencies
@@ -17,6 +15,7 @@ sudo apt install libcurl4-openssl-dev
 # Clone The Repo
 git clone https://github.com/TX-One/HTTPRAF.git
 # Make executable
+cd HTTPRAF
 chmod +x httpraf
 # Install globally
 sudo mv httpraf /usr/local/bin/httpraf
@@ -33,6 +32,8 @@ httpraf urls.txt --201 --user-agent "Mozilla/5.0 (Red Team / HTTPRAF)" --verbose
 ```
 ## --help/--h
 ```bash
+Usage: httpraf [input-file] [options]
+
 Options:
   --1xx/2xx/3xx/4xx/5xx  Filter by status category
   --<code>               Filter by specific status code (e.g., --404)
@@ -41,6 +42,11 @@ Options:
   --user-agent STR       Set custom User-Agent
   --silent               Disable all non-essential output
   --verbose              Show detailed processing info
+
+  --help                 Show this msj
+
+
+DEFAULT_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/115.0.1901.203
 ```
 # Development Guidelines
 ## 🏗️ Architecture
