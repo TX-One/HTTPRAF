@@ -8,12 +8,20 @@ A high-performance HTTP scanner designed for cybersecurity teams. Key features:
 - **Zero-Dependency**: Single binary deployment
 
 # Quick Start
-
+## Install Dependencies
+```bash
+sudo apt install libcurl4-openssl-dev
+```
 ## Download & Install
 ```bash
-curl -sSL https://github.com/TX-One/HTTPRAF/install.sh | bash
+# Clone The Repo
+git clone https://github.com/TX-One/HTTPRAF
+# Make executable
+chmod +x httpraf
+# Install globally
+sudo mv httpraf /usr/local/bin/httpraf
 ```
-## USAGE
+## Usage
 ```bash
 # Basic Scan
 
@@ -23,7 +31,17 @@ httpraf urls.txt --2xx --output live_targets.txt
 
 httpraf urls.txt --201 --user-agent "Mozilla/5.0 (Red Team / HTTPRAF)" --verbose |tee -a output.txt
 ```
-
+## --help/--h
+```bash
+Options:
+  --1xx/2xx/3xx/4xx/5xx  Filter by status category
+  --<code>               Filter by specific status code (e.g., --404)
+  --all                  Show all responses
+  --output FILE          Save results to file
+  --user-agent STR       Set custom User-Agent
+  --silent               Disable all non-essential output
+  --verbose              Show detailed processing info
+```
 # Development Guidelines
 ## 🏗️ Architecture
 
@@ -49,3 +67,23 @@ flowchart TD
 - Implement rate limiting
 - Use CSPRNG for nonce generation
 
+---
+
+# 🤝 Contributing to the Project
+
+🔹 Have improvements? Submit a Pull Request.
+
+🔹 Encountered an issue? Report it in GitHub Issues.
+
+
+---
+
+# 📞 Support & Contact
+
+📢 Have questions? Reach out through:
+
+🔹 Telegram : https://t.me/TXpOne
+
+🔹 GitHub Issues
+
+---
