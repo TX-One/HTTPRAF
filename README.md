@@ -30,6 +30,7 @@ httpraf urls.txt --2xx --output live_targets.txt
 
 httpraf urls.txt --201 --user-agent "Mozilla/5.0 (Red Team / HTTPRAF)" --verbose |tee -a output.txt
 ```
+[CHNGELOG.md](https://github.com/TX-One/HTTPRAF/blob/main/docs/CHANGELOG.md)
 ## --help/--h
 ```bash
 Usage: httpraf [input-file] [options]
