@@ -15,7 +15,7 @@ sudo apt install libcurl4-openssl-dev
 ## Download & Install
 ```bash
 # Clone The Repo
-git clone https://github.com/TX-One/HTTPRAF
+git clone https://github.com/TX-One/HTTPRAF.git
 # Make executable
 chmod +x httpraf
 # Install globally
